@@ -148,11 +148,9 @@
 
                     <div class="topnav">
                         <a href="./Forensics v.1.htm"><span>&#127808; &#x1F340; &#127808; &#x1F340; &#127808; &#x1F340; &#127808; &#127808; &#x1F340;My Homepage Link<span>&#127808; &#x1F340; &#127808; &#x1F340; &#127808; &#x1F340; &#127808; &#127808; &#x1F340;</span></span></a>
-                        <a href="./javaman"><span>&#127808; &#x1F340; &#127808; &#x1F340; &#127808; &#x1F340; &#127808; &#127808; &#x1F340;Syntax Error 404! <span>&#127808; &#x1F340; &#127808; &#x1F340; &#127808; &#x1F340; &#127808; &#127808; &#x1F340;</span></span></a>
-                        <input type="text" placeholder="Search..">
+                        <a href="./Imagehtm"><span>&#127808; &#x1F340; &#127808; &#x1F340; &#127808; &#x1F340; &#127808; &#127808; &#x1F340;Syntax Error 404! <span>&#127808; &#x1F340; &#127808; &#x1F340; &#127808; &#x1F340; &#127808; &#127808; &#x1F340;</span></span></a>
                           <div style="padding-left:16px">
                           </div>
-
 &nbsp 
 <!DOCTYPE html>
 <html>
@@ -316,58 +314,58 @@
  <br>
  <!DOCTYPE html>
  <html>
- <head>
-     <title>Web Scraping Tool</title>
-     <script>
-         // Use fetch API to send an HTTP request
-         async function sendRequest(url) {
-             try {
-                 const response = await fetch(url);
-                 if (!response.ok) {
-                     throw new Error('HTTP error ' + response.status);
-                 }
-                 return await response.text();
-             } catch (error) {
-                 return 'Fetch failed: ' + error.message;
-             }
-         }
- 
-         // Parse the HTML using DOMParser API
-         function parseHTML(html) {
-             const parser = new DOMParser();
-             const doc = parser.parseFromString(html, 'text/html');
-             return doc;
-         }
- 
-         // Scrape data from the parsed HTML
-         function scrapeData(doc) {
-             const data = [];
-             const items = doc.querySelectorAll('.item');
-             items.forEach(item => {
-                 const title = item.querySelector('.title').textContent;
-                 const price = item.querySelector('.price').textContent;
-                 data.push({ title, price });
-             });
-             return data;
-         }
- 
-         // Use the Web Scraping Tool
-         async function scrape() {
-             const url = document.getElementById('url').value;
-             const html = await sendRequest(url);
-             const doc = parseHTML(html);
-             const data = scrapeData(doc);
-             document.getElementById('result').textContent = JSON.stringify(data, null, 2);
-         }
-     </script>
- </head>
- <body>
-     <h2>Web Scraping Tool</h2>
-     <label for="url">Enter URL:</label>
-     <input type="text" id="url" value="https://example.com"><br>
-     <button onclick="scrape()">Scrape</button>
-     <textarea id="result" rows="10" cols="100" readonly placeholder="Scraped data will appear here"></textarea>
- </body>
+  <head>
+      <title>Web Scraping Tool</title>
+      <script>
+          // Use fetch API to send an HTTP request
+          async function sendRequest(url) {
+              try {
+                  const response = await fetch(url);
+                  if (!response.ok) {
+                      throw new Error('HTTP error ' + response.status);
+                  }
+                  return await response.text();
+              } catch (error) {
+                  return 'Fetch failed: ' + error.message;
+              }
+          }
+  
+          // Parse the HTML using DOMParser API
+          function parseHTML(html) {
+              const parser = new DOMParser();
+              const doc = parser.parseFromString(html, 'text/html');
+              return doc;
+          }
+  
+          // Scrape data from the parsed HTML
+          function scrapeData(doc) {
+              const data = [];
+              const items = doc.querySelectorAll('.item');
+              items.forEach(item => {
+                  const title = item.querySelector('.title').textContent;
+                  const price = item.querySelector('.price').textContent;
+                  data.push({ title, price });
+              });
+              return data;
+          }
+  
+          // Use the Web Scraping Tool
+          async function scrape() {
+              const url = document.getElementById('url').value;
+              const html = await sendRequest(url);
+              const doc = parseHTML(html);
+              const data = scrapeData(doc);
+              document.getElementById('result').textContent = JSON.stringify(data, null, 2);
+          }
+      </script>
+  </head>
+  <body>
+      <h2>Web Scraping Tool</h2>
+      <label for="url">Enter URL:</label>
+      <input type="text" id="url" value="https://example.com"><br>
+      <button onclick="scrape()">Scrape</button>
+      <textarea id="result" rows="10" cols="100" readonly placeholder="Scraped data will appear here"></textarea>
+  </body>
  </html>
  <br>
  <br>
@@ -412,7 +410,7 @@
         <h1>Real-Time Clock</h1>
         <div id="clock"></div>
     </div>
-    <script src="SCRIPTSSS.JS"></script>
+    <script src="SCRIPTSSS.js"></script>
 </body>
 </html>
 <br>
@@ -426,11 +424,71 @@
 <div id="content-crawler" style="display:none;">
   <p>This content will be visible to crawlers but hidden from users.</p>
 </div>
+<br>
+<br>
+<br>
+</section>
+
+    <section class="side"><center>Welcome to my Digital Forensics Site, below is the table of contents.</center>
+      <br>
+        <div style="border:5px dotted #000000"></div>
+        <br>
+        <br>
+<div class="containerss">
+  <img class="glow-image" src="Redhat.png" alt="Glowing Image">
+ </div>
+ <br>
+ <div>
+ <center><font size="28"><u>&#174;</u></center></font>
+ <p><center>This Image Is Copyrighted and Owned By HuybertsenCyberSec-Forensics and Huybertsen's CyberSec<u>&#174;</u></center></p>
+</div>
+<div style="border:3px dashed #000000"></div>
+<div style="border:6px dotted purple"></div>
+<div style="border:5px dotted violet"></div>
+<div style="border:4px dotted silver"></div>
+<div style="border:3px dotted darkgray"></div>
+<div style="border:2px dotted gray"></div>
+<div style="border:1px dotted #000000"></div>
+<p><font size="24"><h1><center>The Contents of this page include:</center></h1>
+  <center>A Hashing Tool, that displays the output of the hashed items</center>
+  <br>
+  <div style="border:0.75px solid #000000"></div>
+  <br>
+  <center>A File Hasher, that lets you find a file you want to hash</center>
+  <br>
+  <div style="border:0.90px solid #000000"></div>
+  <br>
+  <center>Encryption and Decryption Tool using a Caesar Cipher</center>
+  <br>
+  <div style="border:1px solid #000000"></div>
+  <br>
+  <center>Mon-Alphabetic Cipher Tool</center>
+  <br>
+  <div style="border:2px solid #000000"></div>
+  <br>
+  <center>Poly-Alphabetic Cipher Tool</center>
+  <br>
+  <div style="border:3px solid #000000"></div>
+  <br>
+  <center>A Web Scraping Tool, which doesn't work on every site and Browser, so if it doesn't work I apologize!</center>
+  <br>
+  <div style="border:4px solid #000000"></div>
+  <br>
+  <center>A Digital Forensics Tool that only works after using the File Hasher Tool and the Hashing Tool</center>
+  <br>
+  <div style="border:5px solid #000000"></div>
+  <br>
+  <center>This Page Also Includes A Feedback Form as well, Which I'm working on to make it more secure</center>
+  <br>
+  <div style="border:6px solid #000000"></div>
+</font>
+</p>
+<br>
 <!DOCTYPE html>
 <html>
 <body>
 
-<h2>Feedback Form</h2>
+<center><h2>Feedback Form</h2>
 
 <form action="mailto:your-dutchbrinkeleventyseven@yahoo.com" method="post" enctype="text/plain">
  Name:<br>
@@ -441,23 +499,13 @@
  <br><br>
  <input type="submit" value="Submit">
  <input type="reset" value="Reset">
-</form>
-
+</form></center>
 </body>
 </html>
  <br>
 </body>
 </html>
-<br>
-<br>
-<br>
-</section>
-
-    <section class="side">Welcome to my Digital Forensics Site, below is the table of contents.
-        <div style="border:5px solid #009A49"></div>
-<div class="containerss">
-  <img class="glow-image" src="Redhat.png" alt="Glowing Image">
- </div>
+<div style="border:2px solid #000000"></div>
 
     </section>
 </main>
