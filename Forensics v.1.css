@@ -13,14 +13,14 @@ footer {
     background-color: black;
     color:rgb(255, 0, 0);
     padding: 20px;
-    height:2800px;
+    height:3000px;
     flex:3;
 }
 .side {
     background-color: cornflowerblue;
     color: rgb(255, 0, 0);
     padding: 20px;
-    height: 2800px;
+    height: 3000px;
     flex:1;
 }
 main {
