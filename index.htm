@@ -502,6 +502,130 @@
 </body>
 </html>
     <br>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        #chatbox {
+            width: 100%;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        #user-messages, #Ferguson-messages {
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+
+        #user-messages {
+            text-align: right;
+        }
+
+        #Ferguson-messages {
+            text-align: left;
+        }
+
+        #user-input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #008CBA;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #007B9A;
+        }
+
+        @media (max-width: 767px) {
+            .container {
+                width: 95%;
+            }
+
+            #chatbox {
+                padding: 10px;
+            }
+
+            #user-input {
+                padding: 5px;
+            }
+
+            button {
+                padding: 5px 10px;
+            }
+        }
+    </style>
+    <script>
+        let responses = {
+            'hello': 'Hello! How can I help you?',
+            'how are you': 'I\'m doing great, thank you! How can I assist you today?',
+            'bye': 'Goodbye! Have a great day!',
+            'what is your name': 'My name is Ferguson, nice to meet you!',
+            'who created you': 'I was developed by a Front-End developer at .',
+            'why do you exist': 'My purpose is to assist users in need. What can I help you with today?',
+            'what can you do': 'I can answer questions and provide helpful information. If you have a question, feel free to ask!',
+            'thank you': 'You\'re welcome! It was my pleasure to assist you!', 
+            'goodbye': 'Goodbye! Have a great day!', 
+        };
+
+        function chatbotResponse(userMessage) {
+            if (typeof responses[userMessage.toLowerCase()] != 'undefined') {
+                return responses[userMessage.toLowerCase()];
+            } else {
+                return 'Sorry, I\'m not sure how to help with that. Can you ask something else?';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div id="chatbox">
+            <div id="user-messages"></div>
+            <div id="Ferguson-messages"></div>
+        </div>
+        <input type="text" id="user-input" placeholder="Type your message..." />
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script>
+        function sendMessage() {
+            let userInput = document.getElementById('user-input');
+            let userMessage = userInput.value;
+            userInput.value = '';
+
+            let aiMessage = chatbotResponse(userMessage);
+
+            document.getElementById('user-messages').innerHTML += '<p>' + userMessage + '</p>';
+            document.getElementById('Ferguson-messages').innerHTML += '<p>' + aiMessage + '</p>';
+        }
+    </script>
+</body>
+    <br>
 <div style="border:5px solid #009A49"></div>
 <br>
 <div id="content" style="display:none;">
