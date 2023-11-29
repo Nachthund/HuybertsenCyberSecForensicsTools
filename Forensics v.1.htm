@@ -397,6 +397,53 @@
 <div style="border:5px solid #009A49"></div>
 <div style="border:5px solid #009A49"></div>
 <br>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Disk Imager</title>
+</head>
+<body>
+    <input type="file" id="file-input" />
+    <button onclick="flashDisk()">Flash Disk</button>
+    <script type="text/javascript">
+        async function flashDisk() {
+            const fileInput = document.getElementById('file-input');
+            const file = fileInput.files[0];
+
+            if (!file) {
+                alert('Please select a file');
+                return;
+            }
+
+            const worker = new Worker('worker.js');
+            worker.postMessage({ file });
+
+            worker.onmessage = function (e) {
+                if (e.data.type === 'error') {
+                    alert('Failed to flash disk: ' + e.data.message);
+                } else if (e.data.type === 'progress') {
+                    console.log('Progress:', e.data.progress);
+                } else if (e.data.type === 'success') {
+                    alert('Disk has been successfully flashed');
+                }
+            };
+        }
+    </script>
+    <script type="text/javascript" src="worker.js"></script>
+    <script>self.onmessage = function (e) {
+    const { file } = e.data;
+    // Use a real implementation here
+    const success = true;
+
+    if (success) {
+        self.postMessage({ type: 'success' });
+    } else {
+        self.postMessage({ type: 'error', message: 'Flashing failed' });
+    }
+};
+    </script>
+</body>
+</html>
 <br>
 <div style="border:5px solid #009A49"></div>
 <div style="border:5px solid #009A49"></div>
