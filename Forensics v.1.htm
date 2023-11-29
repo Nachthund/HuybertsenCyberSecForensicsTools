@@ -446,6 +446,60 @@
 </html>
 <br>
 <div style="border:5px solid #009A49"></div>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Brute Force Password Cracker</title>
+    <script>
+        function generateStrings(current, index, maxLength) {
+            if (index == maxLength) {
+                console.log(current);
+                return;
+            }
+
+            for (var i = 0; i < 26; i++) {
+                current[index] = 'a'.charCodeAt(0) + i;
+                generateStrings(current, index + 1, maxLength);
+            }
+        }
+
+        function startCracker() {
+            var password = document.getElementById('password').value;
+            var maxLength = password.length;
+            var current = new Uint8Array(maxLength);
+
+            for (var length = 1; length <= maxLength; length++) {
+                for (var i = 0; i < length; i++) {
+                    current[i] = 'a'.charCodeAt(0);
+                }
+
+                while (1) {
+                    var currentStr = String.fromCharCode.apply(null, current);
+
+                    if (currentStr == password) {
+                        console.log("Password found: " + currentStr);
+                        return;
+                    }
+
+                    for (var i = length - 1; i >= 0; i--) {
+                        if (current[i] < 'z'.charCodeAt(0)) {
+                            current[i]++;
+                            break;
+                        } else {
+                            current[i] = 'a'.charCodeAt(0);
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <label for="password">Enter password:</label>
+    <input type="text" id="password" name="password">
+    <button onclick="startCracker()">Start Cracker</button>
+</body>
+</html>
 <div style="border:5px solid #009A49"></div>
 <br>
 <div id="content" style="display:none;">
