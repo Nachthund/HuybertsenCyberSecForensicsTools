@@ -84,6 +84,7 @@ tr:nth-child(even) {
 button {
     align-items: center;
     text-decoration: none;
+    color: red;
 }
 
 strong {
