@@ -83,8 +83,9 @@ tr:nth-child(even) {
 
 button {
     align-items: center;
-    text-decoration: none;
+    text-decoration: underline overline #FF3028;
     color: red;
+    background-color: silver
 }
 
 strong {
