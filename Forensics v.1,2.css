@@ -22,7 +22,8 @@ button {
     margin: 5px 10px 5px 10px;
     padding: 4px 7px 4px 7px;
     border: solid black;
-    background-color: cyan;
+    background-color: silver;
+    color: red;
 }
 
 .box {
