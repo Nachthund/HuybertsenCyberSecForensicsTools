@@ -653,7 +653,91 @@
 <br>
 <br>
 <br>
-    
+    <br>
+<br>
+<br>
+<br>
+<br>
+    <br>
+<br>
+<br>
+<br>
+<br>
+    <br>
+<br>
+<br>
+<br>
+<br>
+    <br>
+<br>
+<br>
+<br>
+<br>
+    <br>
+<br>
+<br>
+<br>
+<br>
+    <br>
+<br>
+<br>
+<br>
+<br>
+    <br>
+<br>
+<br>
+<br>
+<br>
+    <center>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ body {
+    font-family: Arial, sans-serif;
+ }
+
+ #translatedText {
+    font-size: 24px;
+    margin-top: 20px;
+ }
+</style>
+</head>
+<body>
+
+<h1>Simple Translator</h1>
+
+<form id="translateForm">
+ <label for="inputText">Enter text:</label><br>
+ <input type="text" id="inputText" name="inputText"><br>
+ <input type="submit" value="Translate">
+</form>
+
+<h2 id="translatedText"></h2>
+
+<script> function translate(text)
+ {
+    // For this simple example, we will simply replace "hello" with "hola" and vice versa.
+    // This can be expanded upon to handle more complex translations.
+    var translatedText = text.replace(/hello/g, "hola").replace(/hola/g, "hello");
+
+    return translatedText;
+ }
+
+// When the form is submitted, translate the input text and display the result.
+document.getElementById("translateForm").addEventListener("submit", function(event)
+ {
+    event.preventDefault(); // Prevent the form from submitting and refreshing the page.
+
+    var inputText = document.getElementById("inputText").value;
+    var translatedText = translate(inputText);
+
+    document.getElementById("translatedText").innerText = translatedText;
+ }); 
+</script>
+</body>
+</html>
+        </center>
     <br>
 <div id="content" style="display:none;">
   <p>This content will be hidden from users but visible to crawlers.</p>
