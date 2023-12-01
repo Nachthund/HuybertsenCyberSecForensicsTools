@@ -1380,42 +1380,36 @@
 <br>
 <br>
     <center>
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Periodic Table</title>
-    <style>
-        .periodic-table-container {
-            width: 200px;
-            margin: 50px auto;
-        }
+<style>
+    .red-strip {
+        background-color: red;
+        height: 12.6px;
+    }
 
-        .periodic-table-select {
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
-        }
-    </style>
+    .white-strip {
+        background-color: white;
+        height: 12.6px;
+    }
+
+    .blue-strip {
+        background-color: blue;
+        height: 12.6px;
+    }
+</style>
 </head>
 <body>
-    <div class="periodic-table-container">
-        <select class="periodic-table-select">
-            <option value="">Select an element</option>
-            <option value="hydrogen">Hydrogen</option>
-            <option value="helium">Helium</option>
-            <!-- Additional elements can be added here -->
-        </select>
-    </div>
-    <script>
-        document.querySelector('.periodic-table-select').addEventListener('change', function(event) {
-            var selectedElement = event.target.value;
-            console.log('Selected element:', selectedElement);
 
-            // Additional functionality can be implemented here, e.g., display additional information about the selected element
-        });
-    </script>
+<div class="red-strip"></div>
+<div class="white-strip"></div>
+<div class="blue-strip"></div>
+<div class="white-strip"></div>
+<div class="red-strip"></div>
+<div class="white-strip"></div>
+<div class="blue-strip"></div>
+
 </body>
 </html>
         </center>
