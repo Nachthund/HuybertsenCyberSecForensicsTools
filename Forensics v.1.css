@@ -22,6 +22,7 @@ footer {
     padding: 20px;
     height: 4250px;
     flex:1;
+    border-color: solid blue;
 }
 main {
     display: flex;}
